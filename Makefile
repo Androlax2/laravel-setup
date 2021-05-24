@@ -25,7 +25,8 @@ rollback: ## Does a rollback
 
 .PHONY: test
 test: ## Runs tests
-	@php artisan test
+	-php artisan test
+	-php artisan dusk
 
 .PHONY: tt
 tt: ## Runs the watcher tests
@@ -33,15 +34,15 @@ tt: ## Runs the watcher tests
 
 .PHONY: lint
 lint: ## Analyse the code
-	@php phpcpd.phar app/ --min-lines=50
-	./vendor/bin/phpmd app,config,routes,resources,tests text phpmd.xml
-	./vendor/bin/phpstan analyse --memory-limit=2G
-	./vendor/bin/phpcs
-	./vendor/bin/tlint
-	@eslint . --fix
-	@stylelint '**/*.scss' --fix
+	-php phpcpd.phar app/ --min-lines=50
+	-./vendor/bin/phpmd app,config,routes,resources,tests text phpmd.xml
+	-./vendor/bin/phpstan analyse --memory-limit=2G
+	-./vendor/bin/phpcs
+	-./vendor/bin/tlint
+	-./node_modules/.bin/eslint . --fix
+	-./node_modules/.bin/stylelint '**/*.scss' --fix
 
 .PHONY: format
 format: ## Format the code
-	./vendor/bin/phpcbf
-	./vendor/bin/tlint
+	-./vendor/bin/phpcbf
+	-./vendor/bin/tlint
