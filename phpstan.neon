@@ -14,6 +14,9 @@ parameters:
     level: 8
 
     ignoreErrors:
+        - '#Cannot access property .* on App\\Models\\User\|null#'
+        - '#Cannot call method .*\(\) on App\\Models\\User\|null#'
+        - '#Cannot call method name\(\) on array|Illuminate\Routing\Route#'
         - '#Unsafe usage of new static#'
 
     excludePaths:
