@@ -1,31 +1,67 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "plugins": ["stylelint-scss", "stylelint-prettier"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-prettier"
+  ],
   "rules": {
     "prettier/prettier": true,
     "color-hex-case": "upper",
     "color-no-invalid-hex": true,
     "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": [true],
+    "scss/at-rule-no-unknown": [
+      true
+    ],
     "color-named": "never",
-    "color-hex-length": "long",
-    "function-disallowed-list": ["rgb", "hsl"],
+    "function-disallowed-list": [
+      "rgb",
+      "hsl"
+    ],
     "declaration-block-no-duplicate-properties": [
       true,
       {
-        "ignore": ["consecutive-duplicates-with-different-values"]
+        "ignore": [
+          "consecutive-duplicates-with-different-values"
+        ]
       }
     ],
     "declaration-empty-line-before": null,
     "declaration-property-unit-allowed-list": {
-      "/^border(?!.*-radius$)/": ["px", "%"],
-      "/^border-radius/": ["px", "rem", "%"],
-      "/^box-shadow": ["px"],
-      "/^margin/": ["rem"],
-      "/^padding/": ["rem"],
-      "font-size": ["rem", "em"],
-      "height": ["rem", "%", "vh"],
-      "width": ["rem", "%", "vw"]
+      "/^border(?!.*-radius$)/": [
+        "px",
+        "%"
+      ],
+      "/^border-radius/": [
+        "px",
+        "rem",
+        "%"
+      ],
+      "/^box-shadow": [
+        "px"
+      ],
+      "/^margin/": [
+        "rem"
+      ],
+      "/^padding/": [
+        "rem"
+      ],
+      "font-size": [
+        "rem",
+        "em"
+      ],
+      "height": [
+        "rem",
+        "%",
+        "vh"
+      ],
+      "width": [
+        "rem",
+        "%",
+        "vw"
+      ]
     },
     "max-empty-lines": 1,
     "no-duplicate-selectors": true,
@@ -45,7 +81,9 @@
         "severity": "warning"
       }
     ],
-    "selector-max-id": [0],
+    "selector-max-id": [
+      0
+    ],
     "string-quotes": "single",
     "value-no-vendor-prefix": true,
     "font-family-no-missing-generic-family-keyword": null,
@@ -53,8 +91,13 @@
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": ["global"]
+        "ignorePseudoClasses": [
+          "global"
+        ]
       }
+    ],
+    "indentation": [
+      2
     ]
   }
 }
