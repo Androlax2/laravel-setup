@@ -35,7 +35,7 @@ tt: ## Runs the watcher tests
 .PHONY: lint
 lint: ## Analyse the code
 	-php phpcpd.phar app/ --min-lines=50
-	-./vendor/bin/phpmd app,config,routes,resources,tests text phpmd.xml
+	-./vendor/bin/phpmd app,config,routes,resources text phpmd.xml
 	-./vendor/bin/phpstan analyse --memory-limit=2G
 	-./vendor/bin/phpcs
 	-./vendor/bin/tlint
