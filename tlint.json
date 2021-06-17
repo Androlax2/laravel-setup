@@ -1,8 +1,11 @@
 {
   "disabled": [
-    "SpaceAfterSoleNotOperator"
+    "SpaceAfterSoleNotOperator",
+    "NoLeadingSlashesOnRoutePaths"
   ],
   "excluded": [
-    "tests/"
+    "tests/",
+    "_ide_helper.php",
+    "_ide_helper_models.php"
   ]
 }
